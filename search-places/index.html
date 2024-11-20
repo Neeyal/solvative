@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Search Places</title>
+</head>
+<body>
+  <div id="app">
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search-box" 
+        placeholder="Search places..." 
+        aria-label="Search places"
+      />
+    </div>
+    <div id="spinner" class="hidden">Loading...</div>
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Place Name</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="3">Start searching</td></tr>
+      </tbody>
+    </table>
+    <div class="pagination-container">
+      <div id="pagination"></div>
+      <div>
+        <label for="limit-input">Limit:</label>
+        <input type="number" id="limit-input" value="5" min="1" max="10" />
+      </div>
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
